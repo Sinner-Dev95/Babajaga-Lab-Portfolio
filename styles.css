@@ -1,0 +1,68 @@
+/* ===== RESET MODERNO & PROFESSIONALE ===== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margins */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML & Body */
+html {
+  -webkit-text-size-adjust: 100%; /* Previente zoom su iOS */
+  -webkit-font-smoothing: antialiased; /* Testi più nitidi */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5; /* Base readability */
+}
+
+/* Media responsive */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements */
+input, button, textarea, select {
+  font: inherit; /* Eredita font del body */
+}
+
+/* Remove button styles */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Table base */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-blue-500);
+  outline-offset: 2px;
+}
+
+/* Prevent text resize landscape */
+@media (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
