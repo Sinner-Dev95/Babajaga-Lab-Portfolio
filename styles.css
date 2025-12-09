@@ -60,6 +60,10 @@ ul, ol {
   outline-offset: 2px;
 }
 
+body{
+  font-family: "Geist", sans-serif;
+}
+
 /* Prevent text resize landscape */
 @media (orientation: landscape) {
   html {

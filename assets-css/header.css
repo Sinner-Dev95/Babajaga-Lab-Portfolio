@@ -1,42 +1,89 @@
 .header-wrapper {
-    max-height: 100px;
+    width: 100%;
+    max-height: 80px;
     border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header-layout-container{
-    max-width: var(--container-mobile);
-    margin: 0 auto;                       
-    padding: 0 var(--spacing-md);  
+.header-layout-container {
+    width: var(--container-mobile);
+    max-width: 100%;
+    padding: 0 var(--spacing-md);
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo-wrapper>.logo-img {
-    width: 70px;
+    width: 60px;
 }
 
 
-.hamburger-wrapper{
+.hamburger-wrapper {
     border: 2px solid purple;
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* 8px verticale, 16px orizzontale */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
 }
 
-.hamburger-wrapper>.hamburger-stripe{
-    height: var(--spacing-xs);
-    
-
+.hamburger-wrapper>.hamburger-stripe {
+    height: 3px;
     background-color: var(--color-text-500);
+
+    /* Aggiungiamo la transizione per il movimento fluido */
+    transition: transform 0.3s ease;
 }
 
-.hamburger-wrapper .hamburger-stripe:nth-child(1) { width: var(--spacing-xl); }
-.hamburger-wrapper .hamburger-stripe:nth-child(2) { width: var(--spacing-lg); }
-.hamburger-wrapper .hamburger-stripe:nth-child(3) { width: var(--spacing-md); }/
+/* Posizione a scaletta di default */
+.hamburger-wrapper .hamburger-stripe:nth-child(1) {
+    width: var(--spacing-lg);
+    transform: translateX(8px);
+    /* Spostato a destra */
+}
 
+.hamburger-wrapper .hamburger-stripe:nth-child(2) {
+    width: var(--spacing-lg);
+    transform: translateX(0);
+    /* Rimane centrato */
+}
 
+.hamburger-wrapper .hamburger-stripe:nth-child(3) {
+    width: var(--spacing-lg);
+    transform: translateX(-8px);
+    /* Spostato a sinistra */
+}
 
+/* Effetto hover: tutti tornano al centro */
+.hamburger-wrapper:hover .hamburger-stripe:nth-child(1),
+.hamburger-wrapper:hover .hamburger-stripe:nth-child(2),
+.hamburger-wrapper:hover .hamburger-stripe:nth-child(3) {
+    transform: translateX(0);
+}
+
+@media (min-width: 600px) {
+    .header-layout-container {
+        max-width: var(--container-tablet);
+        /* 576px */
+    }
+}
+
+@media (min-width: 960px) {
+    .header-layout-container {
+        max-width: var(--container-small-laptop);
+        /* 928px */
+    }
+}
+
+@media (min-width: 1280px) {
+    .header-layout-container {
+        max-width: var(--container-desktop);
+        /* 1290px */
+    }
+}

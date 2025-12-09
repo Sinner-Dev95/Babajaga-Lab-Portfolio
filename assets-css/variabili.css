@@ -5,28 +5,35 @@
   /* Font Family */
   --font-family-primary: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
   
-  /* Font Sizes */
-  --font-size-h1: 80px;
-  --font-size-h2: 64px;
-  --font-size-h3: 52px;
-  --font-size-h4: 42px;
-  --font-size-h5: 34px;
-  --font-size-h6: 28px;
-  --font-size-body: 20px;
+/* Font Sizes - Responsive Clamp (rem) */
+  --size-h1: clamp(4.25rem, 5vw + 1rem, 6.375rem);    /* 68px → 102px */
+  --size-h2: clamp(3.5rem, 4vw + 1rem, 5.25rem);      /* 56px → 84px */
+  --size-h3: clamp(2.875rem, 3.5vw + 1rem, 4.3125rem); /* 46px → 69px */
+  --size-h4: clamp(2.375rem, 3vw + 1rem, 3.5625rem);  /* 38px → 57px */
+  --size-h5: clamp(2rem, 2.5vw + 1rem, 3rem);         /* 32px → 48px */
+  --size-h6: clamp(1.625rem, 2vw + 1rem, 2.4375rem);  /* 26px → 39px */
+  --size-body: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);  /* 16px → 20px */
   
-  /* Font Weights */
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-regular: 400;
   
-  /* Line Heights */
-  --line-height-h1: 88px;
-  --line-height-h2: 72px;
-  --line-height-h3: 60px;
-  --line-height-h4: 48px;
-  --line-height-h5: 40px;
-  --line-height-h6: 32px;
-  --line-height-body: 32px;
+/* Font Weights */
+  --weight-900: 900;
+  --weight-800: 800;
+  --weight-700: 700;
+  --weight-600: 600;
+  --weight-500: 500;
+  --weight-400: 400;
+  --weight-300: 300;
+  --weight-200t: 200;
+  --weight-100: 100;
+  
+  /* Line Heights - Responsive Clamp (rem) */
+  --line-height-h1: clamp(4.675rem, 5.5vw + 1rem, 7.0125rem);   /* 74.8px → 112.2px (1.1× font-size) */
+  --line-height-h2: clamp(3.85rem, 4.4vw + 1rem, 5.775rem);     /* 61.6px → 92.4px (1.1× font-size) */
+  --line-height-h3: clamp(3.1625rem, 3.85vw + 1rem, 4.74375rem); /* 50.6px → 75.9px (1.1× font-size) */
+  --line-height-h4: clamp(2.6125rem, 3.3vw + 1rem, 3.91875rem);  /* 41.8px → 62.7px (1.1× font-size) */
+  --line-height-h5: clamp(2.2rem, 2.75vw + 1rem, 3.3rem);        /* 35.2px → 52.8px (1.1× font-size) */
+  --line-height-h6: clamp(1.7875rem, 2.2vw + 1rem, 2.68125rem);  /* 28.6px → 42.9px (1.1× font-size) */
+  --line-height-body: clamp(1.4rem, 2vw + 0.5rem, 1.75rem);      /* 22.4px → 28px (1.4× font-size) */
   
   /* Letter Spacing */
   --letter-spacing-tight: 0px;
@@ -35,33 +42,49 @@
   --font-style-normal: normal;
   
   /* ===== COLORS ===== */
-  /* Blues */
-  --color-blue-50: rgba(234, 241, 253, 1);
-  --color-blue-75: rgba(169, 199, 245, 1);
-  --color-blue-100: rgba(133, 176, 241, 1);
-  --color-blue-200: rgba(81, 158, 234, 1);
-  --color-blue-300: rgba(133, 176, 241, 1);
-  --color-blue-400: rgba(31, 83, 161, 1);
-  --color-blue-500: rgba(27, 73, 140, 1);
+  /* Orange*/
+  --orange-100: #ffc9ab;
+  --orange-200: #ff9256;
+  --orange-300: #ff5c02;
+  --orange-400: #c74700;
+  --orange-500: #8d3200;
+  --orange-600: #8d3200;
   
-  /* Text Colors */
-  --color-text-50: rgba(236, 236, 236, 1);
-  --color-text-100: rgba(177, 177, 177, 1);
-  --color-text-150: rgba(144, 144, 144, 1);
-  --color-text-200: rgba(96, 96, 96, 1);
-  --color-text-300: rgba(64, 64, 64, 1);
-  --color-text-400: rgba(45, 45, 45, 1);
-  --color-text-500: rgba(39, 39, 39, 1);
-  --color-text-white: rgba(255, 255, 255, 1);
   
-  /* Accent Colors */
-  --color-accent-red: rgba(239, 68, 68, 1);
-  --color-accent-orange: rgba(252, 145, 58, 1);
-  --color-accent-yellow-100: rgba(249, 212, 35, 1);
-  --color-accent-yellow-200: rgba(237, 229, 116, 1);
-  --color-accent-pink-100: rgba(245, 68, 132, 1);
-  --color-accent-pink-200: rgba(217, 0, 177, 1);
   
+  /* Cold */
+  --cold-100:#c4aaff;
+  --cold-200:#8855ff;
+  --cold-300:#4d00ff;
+  --cold-400:#3c00c6;
+  --cold-500:#2a008c;
+ 
+  
+  /* Neutral */
+  --neutral-100:#ffffff;
+  --neutral-200:#e8e8e8;
+  --neutral-300:#d2d2d2;
+  --neutral-400:#bbbbbb;
+  --neutral-500:#a4a4a4;
+  --neutral-600:#8e8e8e;
+  --neutral-700:#777777;
+  --neutral-800:#606060;
+  --neutral-900:#4a4a4a;
+  --neutral-1000:#333333;
+  
+
+  /* Red */
+  --red-100:#fb3748;
+  --red-200:#d00416;
+  
+  /* Yellow */
+  --yellow-100:#ffdb43;
+  --yellow-200:#dfb400;
+
+  /* Green */
+  --green-100:#84ebb4;
+  --green-200:#1fc16b;
+
   /* ===== SPACING ===== */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -71,7 +94,8 @@
   --spacing-xxl: 64px;
   
   /* ===== LAYOUT ===== */
-  --container-mobile: 100%;
+  --container-mobile: calc(100% - 32px);
+  --container-tablet: 576px;  
   --container-small-laptop: 928px;    /* Tablet + Laptop piccoli */
   --container-desktop: 1290px;        /* Desktop grandi */
 }
