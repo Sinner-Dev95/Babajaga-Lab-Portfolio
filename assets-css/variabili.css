@@ -4,18 +4,54 @@
   /* ===== TYPOGRAPHY ===== */
   /* Font Family */
   --font-family-primary: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
-  
-/* Font Sizes - Responsive Clamp (rem) */
-  --size-h1: clamp(4.25rem, 5vw + 1rem, 6.375rem);    /* 68px → 102px */
-  --size-h2: clamp(3.5rem, 4vw + 1rem, 5.25rem);      /* 56px → 84px */
-  --size-h3: clamp(2.875rem, 3.5vw + 1rem, 4.3125rem); /* 46px → 69px */
-  --size-h4: clamp(2.375rem, 3vw + 1rem, 3.5625rem);  /* 38px → 57px */
-  --size-h5: clamp(2rem, 2.5vw + 1rem, 3rem);         /* 32px → 48px */
-  --size-h6: clamp(1.625rem, 2vw + 1rem, 2.4375rem);  /* 26px → 39px */
-  --size-body: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);  /* 16px → 20px */
-  
-  
-/* Font Weights */
+
+  /* Font Sizes - Responsive Clamp (rem) */
+  --size-h1: clamp(2.5rem, 6vw + 0.5rem, 6.25rem);
+  /* 40px → 100px (il tuo wireframe) */
+  --size-h2: clamp(2rem, 5vw + 0.4rem, 4.6875rem);
+  /* 32px → 75px (75% di H1) */
+  --size-h3: clamp(1.625rem, 4vw + 0.3rem, 3.5rem);
+  /* 26px → 56px (75% di H2) */
+  --size-h4: clamp(1.375rem, 3vw + 0.2rem, 2.625rem);
+  /* 22px → 42px (75% di H3) */
+  --size-h5: clamp(1.125rem, 2vw + 0.1rem, 1.9375rem);
+  /* 18px → 31px (75% di H4) */
+  --size-h6: clamp(1rem, 1.5vw, 1.5rem);
+  /* 16px → 24px (77% di H5) */
+  --size-body: clamp(0.875rem, 1vw, 1.125rem);
+  /* 14px → 18px (75% di H6) */
+  --size-small: clamp(0.75rem, 0.8vw, 0.875rem);
+  /* 12px → 14px (78% di body) */
+
+  /* Line Heights - Ottimizzati per ogni dimensione */
+  --line-height-h1: 1.0;   /* 100px - impatto massimo brutalista */
+  --line-height-h2: 1.05;  /* 79px - compatto ma leggibile */
+  --line-height-h3: 1.1;   /* 62px - equilibrio perfetto */
+  --line-height-h4: 1.15;  /* 48px - buona leggibilità */
+  --line-height-h5: 1.2;   /* 37px - confortevole */
+  --line-height-h6: 1.3;   /* 31px - molto leggibile */
+  --line-height-body: 1.6; /* 29px - ottimo per testi lunghi */
+  --line-height-small: 1.5; /* 21px - per microtesti */
+
+  /* Letter Spacing - Stile brutalista */
+  --letter-spacing-h1: -0.02em; /* Tight per impatto */
+  --letter-spacing-h2: -0.01em; /* Slight tight */
+  --letter-spacing-h3: 0em;      /* Normal */
+  --letter-spacing-h4: 0.01em;  /* Leggermente espanso */
+  --letter-spacing-h5: 0.02em;  /* Espanso per chiarezza */
+  --letter-spacing-body: 0.01em; /* Espanso per leggibilità */
+
+  /* Font Weights - Gerarchia visiva */
+  --weight-h1: 900; /* Black - maximum impact */
+  --weight-h2: 800; /* Extra Bold */
+  --weight-h3: 700; /* Bold */
+  --weight-h4: 600; /* Semi Bold */
+  --weight-h5: 500; /* Medium */
+  --weight-h6: 400; /* Regular */
+  --weight-body: 400; /* Regular */
+  --weight-small: 400; /* Regular */
+
+  /* Legacy Font Weights */
   --weight-900: 900;
   --weight-800: 800;
   --weight-700: 700;
@@ -23,24 +59,12 @@
   --weight-500: 500;
   --weight-400: 400;
   --weight-300: 300;
-  --weight-200t: 200;
+  --weight-200: 200;
   --weight-100: 100;
-  
-  /* Line Heights - Responsive Clamp (rem) */
-  --line-height-h1: clamp(4.675rem, 5.5vw + 1rem, 7.0125rem);   /* 74.8px → 112.2px (1.1× font-size) */
-  --line-height-h2: clamp(3.85rem, 4.4vw + 1rem, 5.775rem);     /* 61.6px → 92.4px (1.1× font-size) */
-  --line-height-h3: clamp(3.1625rem, 3.85vw + 1rem, 4.74375rem); /* 50.6px → 75.9px (1.1× font-size) */
-  --line-height-h4: clamp(2.6125rem, 3.3vw + 1rem, 3.91875rem);  /* 41.8px → 62.7px (1.1× font-size) */
-  --line-height-h5: clamp(2.2rem, 2.75vw + 1rem, 3.3rem);        /* 35.2px → 52.8px (1.1× font-size) */
-  --line-height-h6: clamp(1.7875rem, 2.2vw + 1rem, 2.68125rem);  /* 28.6px → 42.9px (1.1× font-size) */
-  --line-height-body: clamp(1.4rem, 2vw + 0.5rem, 1.75rem);      /* 22.4px → 28px (1.4× font-size) */
-  
-  /* Letter Spacing */
-  --letter-spacing-tight: 0px;
-  
+
   /* Font Styles */
   --font-style-normal: normal;
-  
+
   /* ===== COLORS ===== */
   /* Orange*/
   --orange-100: #ffc9ab;
@@ -49,58 +73,94 @@
   --orange-400: #c74700;
   --orange-500: #8d3200;
   --orange-600: #8d3200;
-  
-  
-  
+
   /* Cold */
-  --cold-100:#c4aaff;
-  --cold-200:#8855ff;
-  --cold-300:#4d00ff;
-  --cold-400:#3c00c6;
-  --cold-500:#2a008c;
- 
-  
+  --cold-100: #c4aaff;
+  --cold-200: #8855ff;
+  --cold-300: #4d00ff;
+  --cold-400: #3c00c6;
+  --cold-500: #2a008c;
+
   /* Neutral */
-  --neutral-100:#ffffff;
-  --neutral-200:#e8e8e8;
-  --neutral-300:#d2d2d2;
-  --neutral-400:#bbbbbb;
-  --neutral-500:#a4a4a4;
-  --neutral-600:#8e8e8e;
-  --neutral-700:#777777;
-  --neutral-800:#606060;
-  --neutral-900:#4a4a4a;
-  --neutral-1000:#333333;
-  
+  --neutral-100: #ffffff;
+  --neutral-200: #e8e8e8;
+  --neutral-300: #d2d2d2;
+  --neutral-400: #bbbbbb;
+  --neutral-500: #a4a4a4;
+  --neutral-600: #8e8e8e;
+  --neutral-700: #777777;
+  --neutral-800: #606060;
+  --neutral-900: #4a4a4a;
+  --neutral-1000: #333333;
 
   /* Red */
-  --red-100:#fb3748;
-  --red-200:#d00416;
-  
+  --red-100: #fb3748;
+  --red-200: #d00416;
+
   /* Yellow */
-  --yellow-100:#ffdb43;
-  --yellow-200:#dfb400;
+  --yellow-100: #ffdb43;
+  --yellow-200: #dfb400;
 
   /* Green */
-  --green-100:#84ebb4;
-  --green-200:#1fc16b;
+  --green-100: #84ebb4;
+  --green-200: #1fc16b;
 
-/* ===== SPACING ===== */
---spacing-0: 0px;
---spacing-1: 4px;
---spacing-2: 8px;
---spacing-3: 12px;
---spacing-4: 16px;
---spacing-5: 20px;
---spacing-6: 24px;
---spacing-7: 32px;
---spacing-8: 40px;
---spacing-9: 48px;
---spacing-10: 64px;
-  
+  /* ===== SPACING ===== */
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 32px;
+  --spacing-8: 40px;
+  --spacing-9: 48px;
+  --spacing-10: 56px;
+  --spacing-11: 100px;
+
+  /* ===== RADIUS ===== */
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 10px;
+  --radius-6: 12px;
+  --radius-7: 16px;
+  --radius-full: 999px;
+  /* Per elementi completamente arrotondati (pills, avatars) */
+
+  /* ===== STROKE (Border Width) ===== */
+  --stroke-0: 0px;
+  --stroke-1: 1px;
+  --stroke-2: 2px;
+  --stroke-3: 4px;
+  --stroke-4: 6px;
+
+  /* ===== SHADOWS (Effects) ===== */
+  /* Shadow Small - Subtle depth */
+  --shadow-sm: 
+    4px 4px 0px 0px rgba(0, 0, 0, 1),
+    0px 0px 0px 2px rgba(0, 0, 0, 1) inset;
+
+  /* Shadow Medium - Standard brutalist */
+  --shadow-md: 
+    6px 6px 0px 0px rgba(0, 0, 0, 1),
+    0px 0px 0px 2px rgba(0, 0, 0, 1) inset;
+
+  /* Shadow Large - Strong impact */
+  --shadow-lg: 
+    8px 8px 0px 0px rgba(0, 0, 0, 1),
+    0px 0px 0px 2px rgba(0, 0, 0, 1) inset;
+
+  /* Shadow None */
+  --shadow-none: none;
+
   /* ===== LAYOUT ===== */
   --container-mobile: calc(100% - 32px);
-  --container-tablet: 576px;  
-  --container-small-laptop: 928px;    /* Tablet + Laptop piccoli */
-  --container-desktop: 1290px;        /* Desktop grandi */
+  --container-tablet: 576px;
+  --container-small-laptop: 928px;
+  /* Tablet + Laptop piccoli */
+  --container-desktop: 1290px;
+  /* Desktop grandi */
 }
